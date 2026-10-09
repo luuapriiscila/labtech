@@ -1,0 +1,5 @@
+## 📄 Licença e Créditos
+
+- **Código Fonte:** Licenciado sob a [MIT License](LICENSE).
+- **Ícones:** Utilizados via [Font Awesome Free](https://fontawesome.com/) (Licenças: [CC BY 4.0](https://fontawesome.com/license/free) para ícones e [MIT](https://fontawesome.com/license/free) para código).
+- **Assets Visuais:** Criados/adaptados para fins exclusivamente acadêmicos (Squad 1 - UDF).
