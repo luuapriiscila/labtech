@@ -613,12 +613,12 @@ footer {
 }
 
 /* ============================================================
-   REGRAS RESPONSIVAS PARA TELEMÓVEIS E TABLETS
+   AJUSTE DE RESPONSIVIDADE PARA TELEMÓVEIS (TOPBAR E ÍCONES)
    ============================================================ */
 
 @media (max-width: 900px) {
   .app-shell {
-    flex-direction: column; /* Move a sidebar para o topo */
+    flex-direction: column;
   }
 
   /* BARRA SUPERIOR EM TELEMÓVEIS */
@@ -640,13 +640,13 @@ footer {
 
   .sidebar nav {
     flex-direction: row;
-    gap: 12px;
+    gap: 10px;
     width: auto;
   }
 
   .nav-item small, 
   .sidebar-cat {
-    display: none; /* Oculta descrições para economizar espaço */
+    display: none;
   }
 
   .nav-item span {
@@ -659,25 +659,52 @@ footer {
     padding: 15px 12px;
   }
 
-  /* TOPBAR EMPILHADA */
+  /* REORGANIZAÇÃO DA TOPBAR NO TELEMÓVEL */
   .topbar {
-    flex-direction: column;
-    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap; /* Permite organizar a busca e as bolinhas na mesma linha */
+    align-items: center;
+    justify-content: space-between;
     gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .brand {
+    width: 100%;
   }
 
   .welcome {
+    width: 100%;
     border-left: none;
     padding-left: 0;
   }
 
+  /* BUSCA OCUPA O ESPAÇO DISPONÍVEL NA LINHA */
   .search {
-    width: 100%;
+    flex: 1;
+    min-width: 160px;
+    height: 40px;
   }
 
-  /* GRELHA EM 1 COLUNA ÚNICA (EMPILHADA) */
+  /* BOLINHAS DA NOTIFICAÇÃO E AVATAR ALINHADAS LADO A LADO */
+  .bell, .avatar {
+    flex-shrink: 0;
+  }
+
+  .bell {
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* GRELHA EM 1 COLUNA ÚNICA */
   .dashboard {
-    grid-template-columns: 1fr !important; /* Força 1 coluna apenas */
+    grid-template-columns: 1fr !important;
     gap: 12px;
   }
 
