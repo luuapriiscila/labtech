@@ -672,3 +672,127 @@ footer {
 
 footer span { color: #0055a0; }
 footer em { font-style: normal; color: #12284b; }
+
+/* ============================================================
+   RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS (TABLETS E TELEMÓVEIS)
+   ============================================================ */
+
+/* Ajustes para ecrãs até 992px (Tablets) */
+@media (max-width: 992px) {
+  .app-shell {
+    flex-direction: column; /* Sidebar passa para o topo */
+  }
+
+  .sidebar {
+    width: 100%;
+    flex: 0 0 auto;
+    min-height: auto;
+    height: 70px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-right: none;
+    border-bottom: 1px solid rgba(18, 40, 75, 0.12);
+  }
+
+  .brand-mark {
+    margin: 0;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    gap: 8px;
+    width: auto;
+  }
+
+  .nav-item small {
+    display: none; /* Esconde os textos dos ícones do menu no topo */
+  }
+
+  .sidebar-cat {
+    display: none; /* Esconde o gatinho da sidebar no mobile para poupar espaço */
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr 1fr; /* Reorganiza para 2 colunas em tablets */
+    grid-template-rows: auto;
+  }
+
+  .lab-panel { grid-column: span 2; grid-row: auto; }
+  .reservation-panel { grid-column: span 1; grid-row: auto; }
+  .agenda-panel { grid-column: span 2; grid-row: auto; padding-right: 20px; }
+  .keys-panel { grid-column: span 2; grid-row: auto; }
+  .requests-panel { grid-column: span 1; grid-row: auto; }
+  .notifications-full-panel { grid-column: span 2; grid-row: auto; }
+  .options-panel-standalone { grid-column: span 1; grid-row: auto; }
+  .forest-panel { grid-column: span 1; grid-row: auto; }
+}
+
+/* Ajustes para ecrãs até 600px (Telemóveis) */
+@media (max-width: 600px) {
+  .main {
+    padding: 12px;
+  }
+
+  /* TOPBAR EM COLUNA NO TELEMÓVEL */
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .welcome {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .search {
+    width: 100%; /* Barra de busca ocupa a largura total */
+  }
+
+  /* DASHBOARD EM 1 COLUNA ÚNICA */
+  .dashboard {
+    grid-template-columns: 1fr; /* Todos os cartões ficam empilhados em 1 coluna */
+    gap: 12px;
+  }
+
+  .lab-panel,
+  .reservation-panel,
+  .agenda-panel,
+  .keys-panel,
+  .requests-panel,
+  .notifications-full-panel,
+  .options-panel-standalone,
+  .forest-panel {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+
+  /* AJUSTE DOS MASCOTES E ÍCONES NO MOBILE */
+  .agenda-panel {
+    padding-right: 16px; /* Remove o espaçamento exagerado do gato */
+  }
+
+  .cat-reserve, .cat-agenda, .cat-requests {
+    height: 70px; /* Reduz o tamanho dos gatinhos */
+    opacity: 0.8;
+  }
+
+  .notice-grid {
+    grid-template-columns: 1fr; /* Notificações passam para 1 coluna */
+  }
+
+  .keys-icon-group img {
+    width: 38px; /* Reduz tamanho das chaves/gatos para caber no telemóvel */
+    height: 38px;
+  }
+
+  /* TÍTULOS E TEXTOS */
+  .panel h2 {
+    font-size: 18px;
+  }
+
+  .metric {
+    font-size: 36px;
+  }
+}
